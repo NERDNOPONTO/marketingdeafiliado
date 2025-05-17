@@ -2985,64 +2985,6 @@ src="https://www.facebook.com/tr?id=548103351456227&ev=PageView&noscript=1"
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Modal functionality
-        const inscricaoBtn = document.getElementById('inscricao-btn');
-        const mobileInscricaoBtn = document.getElementById('mobile-inscricao-btn');
-        const inscricaoModal = document.getElementById('inscricao-modal');
-        const closeModal = document.getElementById('close-modal');
-        const successModal = document.getElementById('success-modal');
-        const closeSuccess = document.getElementById('close-success');
-        const inscricaoForm = document.getElementById('inscricao-form');
-
-        function openModal() {
-            inscricaoModal.classList.remove('hidden');
-            inscricaoModal.classList.add('flex');
-        }
-
-        function closeModalFunc() {
-            inscricaoModal.classList.add('hidden');
-            inscricaoModal.classList.remove('flex');
-        }
-
-        inscricaoBtn.addEventListener('click', openModal);
-        mobileInscricaoBtn.addEventListener('click', openModal);
-        closeModal.addEventListener('click', closeModalFunc);
-
-        closeSuccess.addEventListener('click', function () {
-            successModal.classList.add('hidden');
-            successModal.classList.remove('flex');
-        });
-
-        inscricaoForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Here you would normally send the form data to your server
-            // For this demo, we'll just show the success modal
-
-            closeModalFunc();
-            successModal.classList.remove('hidden');
-            successModal.classList.add('flex');
-
-            // Reset form
-            inscricaoForm.reset();
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 
