@@ -3018,6 +3018,17 @@ src="https://www.facebook.com/tr?id=548103351456227&ev=PageView&noscript=1"
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
+<script>
+  document.getElementById('btn-comprar-agora').addEventListener('click', function () {
+    fbq('track', 'Purchase', {
+      value: 19.99,
+      currency: 'AOA'
+    });
+
+    // redirecionar para checkout
+    window.location.href = "/checkout";
+  });
+</script>
 
     </script>
 </body>
